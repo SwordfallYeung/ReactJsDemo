@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <script src="../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+    {/*
+    If a tag is empty, you may close it immediately with />
+    */}
+
+    const element = <img src=''/>
+
+  
+    {/*
+    JSX tags may contain children
+    */}
+    const element1 = (
+       <h1 className='greeting'>
+            Hello,world!
+       </h1>
+    );
+
+    {/*
+     与上面方法对比；
+     React.createElement() performs a few checks to help you write bug-free code
+     but essentially it creates an object like this:
+     const element = {
+     type: 'h1',
+     props: {
+        className: 'greeting',
+        children: 'Hello, world'
+       }
+     };
+
+     These objects are called "React elements".
+    */}
+
+     const element2=React.createElement(
+       'h1'
+        {className: 'greeting'},
+        'Hello, world!'
+     );
+      
+
+
+    </script>
+  </body>
+</html>
