@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script src="../../build/browser.min.js"></script>
+    <script src="../../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      {/*
+      一个function也是一个简单的组件
+      */}
+       function Welcome(props){
+        return <h1>Hello, {props.name}</h1>;
+       }
+
+      {/*
+       Components can refer to other components in their output.
+      */}
+      function App(){
+         return (
+             <div>
+                <Welcome name="Sara"/>
+                <Welcome name="Cahal"/>
+                <Welcome name="Edite"/>
+             </div>
+         );
+      }
+
+      ReactDOM.render(
+         <App />,
+         document.getElementById('example')  
+      )
+    </script>
+  </body>
+</html>

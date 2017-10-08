@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script src="../../build/browser.min.js"></script>
+    <script src="../../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      {/*
+        JSX In Depth
+
+        React.createElement(component,props,...children) function
+      */}
+
+      <MyButton color="blue" shadowSize={2}>
+        Click Me
+      </MyButton>
+
+      {/*
+        compiles into:
+      */}
+
+      React.createElement(
+       MyButtton,
+       {color:'blue',shadowSize:2},
+       'Click Me'
+      )
+      
+      
+    </script>
+  </body>
+</html>

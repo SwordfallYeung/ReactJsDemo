@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script src="../../build/browser.min.js"></script>
+    <script src="../../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+       {/*
+         Convert a function to a class
+       */}
+       
+       class Clock extends React.Component{
+          constructor(props){
+            super(props);
+            this.state={date:new Date()};
+          }
+   
+        render(){
+          return(
+            <div>
+               <h1>Hello,world!</h1>
+               <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+          );
+        }
+       }
+
+       ReactDOM.render(
+         <Clock/>,
+         document.getElementById("example")
+       );
+    </script>
+  </body>
+</html>

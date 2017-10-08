@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script src="../../build/browser.min.js"></script>
+    <script src="../../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <div id="example2"></div>
+    <script type="text/babel">
+       {/*
+         Whether you declare a component as a function or a class, it must modify its own props.Consider this sum function:
+         
+         pure function 
+       */}
+
+       function sum(a,b){
+          return a+b;
+       }
+
+       {/*
+         
+         impure function
+       */}
+
+       function withdraw(account, amount){
+          account.total - = amount;
+       }
+
+       {/*
+        All React components must act like pure functions with respect to their props.
+       */}
+
+
+    </script>
+  </body>
+</html>

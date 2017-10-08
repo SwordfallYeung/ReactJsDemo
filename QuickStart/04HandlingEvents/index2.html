@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script src="../../build/browser.min.js"></script>
+    <script src="../../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      {/*
+        Handling Events
+      */}
+      
+      class LoggingButton extends React.Component{
+         //This syntax ensures 'this' is bound within handleClick.
+         //Warning: this is *experimental* syntax.
+         handleClick (){
+           console.log('this is:',this);
+         }
+
+         render(){
+           return (
+             <button onClick={(e) => this.handleClick(e)}>
+                Click me
+             </button>
+           );
+         }
+      }
+
+      ReactDOM.render(
+        <LoggingButton/>,
+        document.getElementById("example")
+      );
+    </script>
+  </body>
+</html>

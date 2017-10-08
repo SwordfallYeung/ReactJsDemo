@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/react-dom.js"></script>
+    <script src="../../build/browser.min.js"></script>
+    <script src="../../build/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      {/*
+        Basic List Components
+        Let's assign a key to our list items inside numbers.map() and fix the missing key issue.
+      */}
+
+      function NumberList(props){
+        const numbers=props.numbers;
+        const listItems=numbers.map((number)=>
+          <li key={number.toString()}>
+              {number}
+          </li>
+        );
+
+        return(
+          <ul>{listItems}</ul>
+        );
+      }
+
+      const numbers=[1,2,3,4,5,6,7];
+      ReactDOM.render(
+        <NumberList numbers={numbers}/>,
+        document.getElementById('example')
+      );
+      
+    </script>
+  </body>
+</html>
